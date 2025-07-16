@@ -48,6 +48,11 @@ main {
     vertical-align: top;
 }
 
+.schedule-table td:first-child {
+    vertical-align: middle;
+    text-align: center;
+}
+
 .schedule-table th {
     background: #f0f0f0;
     color: #333;
