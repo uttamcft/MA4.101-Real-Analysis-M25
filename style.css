@@ -1,7 +1,53 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Forum', sans-serif;
 }
+
+/* Top Strip Styling */
+.top-strip {
+    background-color: #48533f;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Two-Column Info Strip Styling */
+.info-strip {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #f0f0f0;
+}
+
+.info-left, .info-right {
+    flex: 1;
+}
+
+/* Collapsible Styling */
+.collapsible {
+    background-color: #48533f;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.collapsible.active, .collapsible:hover {
+    background-color: #33402d;
+}
+
+.content {
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: max-height 0.2s ease-out;
+}
+
 
 /* Navbar Styling */
 .navbar {
