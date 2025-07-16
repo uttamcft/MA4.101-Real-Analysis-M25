@@ -3,71 +3,80 @@ body {
     font-family: 'Forum', sans-serif;
 }
 
-.top-strip {
+/* Top Banner */
+.top-banner {
     background-color: #48533f;
     color: white;
     padding: 2rem;
     text-align: center;
 }
 
-.main-layout {
+/* Two-Column Layout */
+.two-column-layout {
     display: flex;
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+    gap: 2rem;
 }
 
 .left-column {
     flex: 3;
-    margin-right: 1rem;
 }
 
 .right-column {
     flex: 1;
 }
 
-.info-strip {
-    background-color: #f7f6f2;
+.info-box {
+    background-color: #f0f0f0;
     padding: 1.5rem;
-    margin-bottom: 1rem;
     border-radius: 8px;
 }
 
-.info-strip-heading {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.expand-button {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
+/* Collapsible Styling */
+.collapsible {
     background-color: #48533f;
     color: white;
     cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
-.expand-content {
+.collapsible.active, .collapsible:hover {
+    background-color: #33402d;
+}
+
+.content {
+    padding: 0 2rem;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    background-color: #f9f9f9;
+    transition: max-height 0.2s ease-out;
 }
 
-.expand-button.active + .expand-content {
-    max-height: 500px;
-}
-
+/* Schedule Table Styling */
 .schedule-table {
     width: 90%;
-    margin-left: 2rem;
     border-collapse: separate;
     border-spacing: 4px;
+    margin-top: 1rem;
+    margin-left: 2rem;
 }
 
-.schedule-table th,
-.schedule-table td {
+.schedule-table th, .schedule-table td {
     padding: 0.6rem;
     border: 1px solid #ccc;
+}
+
+.schedule-table td {
+    vertical-align: middle;
+    text-align: left;
 }
 
 .schedule-table td.center-text {
@@ -75,15 +84,24 @@ body {
     vertical-align: middle;
 }
 
+.schedule-table th {
+    background: #f0f0f0;
+    color: #333;
+}
+
 .schedule-table tbody tr:nth-child(even) {
     background: #f9f9f9;
 }
 
-.custom-colored-row td:nth-child(n+2),
+.custom-colored-row td:nth-child(n+2) {
+    background-color: #fcf0f3;
+}
+
 .custom-colored-row .highlight-cell {
     background-color: #fcf0f3;
 }
 
+/* Link Pill Styling */
 a.pill {
     display: inline-block;
     padding: 3px 8px;
@@ -100,6 +118,7 @@ a.pill:hover {
     background: #d0e6f7;
 }
 
+/* Badge Styling */
 .badge {
     display: inline-block;
     padding: 2px 6px;
@@ -107,4 +126,28 @@ a.pill:hover {
     color: white;
     border-radius: 6px;
     font-size: 0.8rem;
+}
+
+/* Section strip styles */
+.strip {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-family: 'Forum', serif;
+}
+
+.light-bg {
+    background-color: #f5f4ee;
+}
+
+.alt-bg {
+    background-color: #f5f4ee;
+}
+
+.strip h2 {
+    margin-top: 0;
+}
+
+.text-red {
+    color: red;
 }
