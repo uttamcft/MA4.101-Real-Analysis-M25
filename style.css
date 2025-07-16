@@ -28,6 +28,18 @@ body {
     flex: 1;
 }
 
+.single-column-strip {
+    background-color: #f7f6f2;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+}
+
+.single-column-content {
+    font-size: 1.1rem;
+}
+
+
+
 .info-box {
     background-color: #f0f0f0;
     padding: 1.5rem;
