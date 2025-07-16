@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Slate Layout</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="top-banner">
-        <h1>Welcome to Real Analysis M25</h1>
-    </header>
+  <div class="banner">
+    Welcome to My Course Website
+  </div>
 
-    <div class="two-column-layout">
-        <div class="left-column">
-            <div class="expandable-text-block">
-                <div class="text-container">
-                    Rechintual Analysis focuses on the rigorous foundation of calculus and its applications in mathematics.
-                    This course will cover sequences, series, limits, continuity, differentiability, and integrability.
-                    The aim is to develop a deeper understanding of mathematical analysis and prepare students for advanced courses.
-                    Detailed examples and exercises will be provided to build strong problem-solving skills.
-                    We also include topics like metric spaces and functional analysis basics.
-                    Each concept will be explained with proofs and applications.
-                    
-                    Students are expected to participate actively in class discussions.
-                    Office hours and extra help sessions will be arranged as needed.
-                </div>
-                <button class="expand-toggle">More Details</button>
-            </div>
-        </div>
-
-        <div class="right-column">
-            <div class="info-box">
-                <p><strong>Instructor:</strong> Dr. XYZ</p>
-                <p><strong>Office:</strong> Room 123, ABC Building</p>
-                <p><strong>Email:</strong> xyz@example.com</p>
-            </div>
-        </div>
+  <div class="main">
+    <div class="left-column">
+      <div id="para1" class="collapsible-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
+        Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. 
+        Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+      </div>
+      <button onclick="toggleText('para1', this)">Show More</button>
     </div>
 
-    <script>
-        const toggleBtn = document.querySelector('.expand-toggle');
-        const textContainer = document.querySelector('.text-container');
-        toggleBtn.addEventListener('click', () => {
-            textContainer.classList.toggle('expanded');
-            toggleBtn.textContent = textContainer.classList.contains('expanded') ? 'Less Details' : 'More Details';
-        });
-    </script>
+    <div class="right-column">
+      <div class="info-entry"><span class="label">Name:</span> John Doe</div>
+      <div class="info-entry"><span class="label">Address:</span> 123 Main St, City</div>
+      <div class="info-entry"><span class="label">Email:</span> john@example.com</div>
+    </div>
+  </div>
+
+  <div class="full-width">
+    <div id="para2" class="collapsible-text">
+      This is the second paragraph shown in a full-width container below the columns. 
+      It also has show/hide functionality. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Cras vel sapien eget quam tincidunt pulvinar nec a elit. Morbi bibendum, lorem eget facilisis dapibus, 
+      massa magna convallis arcu, sit amet sollicitudin ligula erat eget nunc.
+    </div>
+    <button onclick="toggleText('para2', this)">Show More</button>
+  </div>
+
+  <script>
+    function toggleText(id, button) {
+      const el = document.getElementById(id);
+      el.classList.toggle('expanded');
+      button.textContent = el.classList.contains('expanded') ? 'Show Less' : 'Show More';
+    }
+  </script>
 </body>
 </html>
