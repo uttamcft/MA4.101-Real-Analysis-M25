@@ -33,6 +33,19 @@
                     real-valued functions of a real variable. </p>
             </div>
 
+            <div class="expandable-text-block">
+                <h2>Prerequisite</h2>
+                <p class="clamp-text"> Elementary knowledge of Calculus Much of mathematics relies on our
+                    ability to be able to solve equations, if not in explicit exact forms, then at least
+                    in being able to establish the existence of solutions. To do this requires a knowledge
+                    of so-called "analysis", which in many respects is just Calculus in very general settings.
+                    The foundations for this work are commenced in Real Analysis, a course that develops this
+                    basic material in a systematic and rigorous manner in the context of real-valued functions 
+                    of a real variable.
+                </p>
+                <button class="expand-toggle">More Details</button>
+            </div>
+
 
         </div>
 
@@ -108,6 +121,16 @@
                     fullText.classList.add("hidden");
                     button.textContent = "More Details";
                 }
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll(".expand-toggle").forEach(button => {
+            button.addEventListener("click", () => {
+                const text = button.previousElementSibling;
+                text.classList.toggle("expanded");
+                button.textContent = text.classList.contains("expanded") ? "Hide Details" : "More Details";
             });
         });
     </script>
