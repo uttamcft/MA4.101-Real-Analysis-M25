@@ -3,71 +3,65 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navigation bar styling */
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
-    background-color: #1abc9c;  /* Adjust navbar background color */
+    padding: 0.75rem 1.5rem;
+    background-color: #1abc9c;
     color: white;
 }
 
-/* Course name left */
 .navbar-left {
     font-size: 1.4rem;
     font-weight: bold;
 }
 
-/* Menu links right */
 .navbar-right a {
-    color: white;               /* Menu link color */
+    color: white;
     text-decoration: none;
-    margin-left: 1.5rem;
-    font-size: 1.1rem;
+    margin-left: 1rem;
 }
 
-/* Hover effect */
 .navbar-right a:hover {
     text-decoration: underline;
 }
 
-/* Main content styling */
+/* Main content */
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
+/* Schedule Table Styling */
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
-.schedule-table th {
-    background: #e8f4fb;
-    color: #0066cc;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-}
-
-.schedule-table td {
-    padding: 0.5rem;
+.schedule-table th, .schedule-table td {
+    padding: 0.6rem;
     border: 1px solid #ccc;
     vertical-align: top;
 }
 
-/* Alternate row background */
-.schedule-table tbody tr:nth-child(even) {
-    background: #f7f9fb;
+.schedule-table th {
+    background: #f0f0f0;
+    color: #333;
 }
 
-/* Pill-style links */
+.schedule-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Link Pill Styling */
 a.pill {
     display: inline-block;
-    padding: 2px 8px;
-    margin: 2px 0;
+    padding: 3px 8px;
+    margin: 2px 2px 2px 0;
     background: #e6f0fa;
     color: #0066cc;
     border: 1px solid #cce;
@@ -80,11 +74,10 @@ a.pill:hover {
     background: #d0e6f7;
 }
 
-/* Badge-style labels like "Due Tue 7/1" */
+/* Badge Styling */
 .badge {
     display: inline-block;
     padding: 2px 6px;
-    margin: 2px 0;
     background: #666;
     color: white;
     border-radius: 6px;
