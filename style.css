@@ -65,6 +65,37 @@ body {
     transition: max-height 0.3s ease;
 }
 
+.expandable-text-block {
+    background: #f7f6f2;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.text-container {
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    max-height: 3.2em; /* ~2 lines with your font */
+}
+
+/* Expanded class removes clamping */
+.text-container.expanded {
+    max-height: 500px; /* Large enough for full paragraph */
+}
+
+/* Optional button styling */
+.expand-toggle {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.expand-toggle:hover {
+    background: #eee;
+}
+
 /* Expanded state overrides */
 .clamp-text.expanded {
     -webkit-line-clamp: unset;
