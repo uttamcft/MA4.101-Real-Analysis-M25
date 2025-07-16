@@ -34,6 +34,49 @@ body {
     border-radius: 8px;
 }
 
+
+/* Heading Strip */
+.info-strip-heading {
+    background-color: #f7f6f2;
+    padding: 1rem 2rem;
+    margin-bottom: 0;
+}
+
+/* Content Strip */
+.info-strip-content {
+    background-color: #f7f6f2;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Expand Button */
+.expand-btn {
+    background: #48533f;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Expand Content (Initially Hidden) */
+.expand-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* Active State */
+.expand-content.active {
+    max-height: 500px; /* Adjust as needed */
+}
+
+/* Schedule Table Left Margin */
+.schedule-table {
+    margin-left: 2rem;
+}
+
 /* Collapsible Styling */
 .collapsible {
     background-color: #48533f;
