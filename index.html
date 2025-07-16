@@ -6,35 +6,61 @@
     <title>Real Analysis M25</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-
-    <!-- MathJax -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-left">Real Analysis M25</div>
-        <div class="navbar-right">
-            <a href="syllabus.html">Syllabus</a>
-            <a href="#">Lectures</a>
-            <a href="#">Assignments</a>
+    <!-- Top Banner -->
+    <header class="top-banner">
+        <h1>Real Analysis M25</h1>
+    </header>
+
+    <!-- Instructor Info Strip -->
+    <section class="info-strip">
+        <div class="info-left">
+            <strong>Course Instructor:</strong> Dr. XYZ<br>
+            <strong>Tutors:</strong> A, B, C
         </div>
-    </nav>
+        <div class="info-right">
+            <strong>Office:</strong> Room 123, ABC Building
+        </div>
+    </section>
 
+    <!-- Collapsible Sections -->
+    <section class="collapsibles">
+        <button class="collapsible">1. Prerequisite</button>
+        <div class="content">
+            <p>Elementary knowledge of Calculus. Much of mathematics relies...</p>
+        </div>
+
+        <button class="collapsible">2. Detailed Syllabus</button>
+        <div class="content">
+            <p>Unit 1: Sequence of real numbers, Bounded and Unbounded Sets...</p>
+        </div>
+
+        <button class="collapsible">3. Grading</button>
+        <div class="content">
+            <p>Assignments in theory: 10 marks, Quizzes in theory: 10 marks...</p>
+        </div>
+
+        <button class="collapsible">4. References</button>
+        <div class="content">
+            <ul>
+                <li>Rudin, Walter, Principles of Mathematical Analysis...</li>
+                <li>Other references as per syllabus</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Course Calendar Table -->
     <main>
-        <h1>Course Calendar</h1>
-
+        <h2>Course Calendar</h2>
         <table class="schedule-table">
-
-        <colgroup>
-        <col style="width: 10%;">
-        <col style="width: 20%;">
-        <col style="width: 40%;">
-        <col style="width: 20%;">
-        </colgroup>
-            
+            <colgroup>
+                <col style="width: 10%;">
+                <col style="width: 20%;">
+                <col style="width: 40%;">
+                <col style="width: 20%;">
+            </colgroup>
             <thead>
                 <tr>
                     <th>Week</th>
@@ -286,5 +312,19 @@
         </table>
     </main>
 
+    <script>
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(button => {
+            button.addEventListener("click", () => {
+                button.classList.toggle("active");
+                const content = button.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
