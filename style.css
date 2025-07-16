@@ -36,15 +36,27 @@ body {
     border-radius: 8px;
 }
 
-.single-column-strip {
-    background-color: #f7f6f2;
-    padding: 1rem 2rem;
-    margin-bottom: 1rem;
+
+
+.common-width {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.single-column-content {
-    font-size: 1.1rem;
+/* Two-column layout */
+.two-column-layout {
+    display: flex;
+    gap: 2rem;
 }
+
+/* Single-column full strip */
+.full-width-strip {
+    background-color: #f7f6f2;
+    border-radius: 8px;
+}
+
+
 
 
 
