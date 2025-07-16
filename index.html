@@ -19,19 +19,6 @@
         <!-- Left Column: Collapsibles -->
         <div class="left-column">
             
-            <div class="expandable-section">
-                <h2>Prerequisite</h2>
-                <p class="preview-text"> Elementary knowledge of Calculus Much of mathematics relies
-                    on our ability to be able to solve equations, if not in explicit exact forms...</p>
-                <button class="expand-button">More Details</button>
-                <p class="full-text hidden">
-                    Elementary knowledge of Calculus Much of mathematics relies on our ability to be able to solve
-                    equations, if not in explicit exact forms, then at least in being able to establish the existence
-                    of solutions. To do this requires a knowledge of so-called "analysis", which in many respects is
-                    just Calculus in very general settings. The foundations for this work are commenced in Real Analysis,
-                    a course that develops this basic material in a systematic and rigorous manner in the context of
-                    real-valued functions of a real variable. </p>
-            </div>
 
             <div class="expandable-text-block">
                 <h2>Prerequisite</h2>
@@ -45,16 +32,6 @@
                 </p>
                 <button class="expand-toggle">More Details</button>
             </div>
-
-            <div class="expandable-text-block">
-    <h2>Prerequisite</h2>
-    <div class="text-container">
-        <p class="expandable-text">
-            Elementary knowledge of Calculus. Much of mathematics relies on our ability to be able to solve equations, if not in explicit exact forms, then at least in being able to establish the existence of solutions. To do this requires a knowledge of so-called "analysis", which in many respects is just Calculus in very general settings. The foundations for this work are commenced in Real Analysis, a course that develops this basic material in a systematic and rigorous manner in the context of real-valued functions of a real variable.
-        </p>
-    </div>
-    <button class="expand-toggle">More Details</button>
-</div>
 
 
         </div>
@@ -93,47 +70,9 @@
         </table>
     </main>
 
-    <script>
-        const collapsibles = document.querySelectorAll(".collapsible");
-        collapsibles.forEach(button => {
-            button.addEventListener("click", () => {
-                button.classList.toggle("active");
-                const content = button.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        });
-    </script>
 
-    <script>
-    document.querySelectorAll(".expand-btn").forEach(button => {
-        button.addEventListener("click", () => {
-            const content = button.nextElementSibling;
-            content.classList.toggle("active");
-            button.textContent = content.classList.contains("active") ? "Less Details" : "More Details";
-        });
-    });
-    </script>
 
-    <script>
-        document.querySelectorAll(".expand-button").forEach(button => {
-            button.addEventListener("click", () => {
-                const section = button.closest(".expandable-section");
-                const fullText = section.querySelector(".full-text");
-                
-                if (fullText.classList.contains("hidden")) {
-                    fullText.classList.remove("hidden");
-                    button.textContent = "Hide Details";
-                } else {
-                    fullText.classList.add("hidden");
-                    button.textContent = "More Details";
-                }
-            });
-        });
-    </script>
+
 
     <script>
         document.querySelectorAll(".expand-toggle").forEach(button => {
@@ -145,20 +84,6 @@
         });
     </script>
 
-    <script>
-document.querySelectorAll(".expand-toggle").forEach(button => {
-    button.addEventListener("click", () => {
-        const container = button.previousElementSibling;
-        container.classList.toggle("expanded");
-
-        if (container.classList.contains("expanded")) {
-            button.textContent = "Hide Details";
-        } else {
-            button.textContent = "More Details";
-        }
-    });
-});
-</script>
 
 </body>
 </html>
