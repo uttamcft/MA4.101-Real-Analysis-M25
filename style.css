@@ -47,16 +47,16 @@ main {
     border: 1px solid #ccc;
 }
 
-/* Ensure vertical middle alignment */
-.schedule-table td:first-child {
-    vertical-align: middle;
+/* Add these centering rules */
+.schedule-table td:first-child,
+.schedule-table td:nth-child(2) {
     text-align: center;
+    vertical-align: middle;
 }
 
-/* Specifically target rowspan cells */
 .schedule-table td[rowspan] {
     vertical-align: middle !important;
-    text-align: center;
+    text-align: center !important;
 }
 
 .schedule-table th {
@@ -95,14 +95,4 @@ a.pill:hover {
     font-size: 0.8rem;
 }
 
-/* Add these centering rules */
-.schedule-table td:first-child,
-.schedule-table td:nth-child(2) {
-    text-align: center;
-    vertical-align: middle;
-}
 
-.schedule-table td[rowspan] {
-    vertical-align: middle !important;
-    text-align: center !important;
-}
