@@ -3,70 +3,58 @@ body {
     font-family: 'Forum', sans-serif;
 }
 
-/* Top Banner */
-.top-banner {
+.top-strip {
     background-color: #48533f;
     color: white;
     padding: 2rem;
     text-align: center;
 }
 
-/* Two-Column Layout */
-.two-column-layout {
+/* Layout */
+.main-layout {
     display: flex;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    gap: 2rem;
 }
 
 .left-column {
     flex: 3;
+    padding: 2rem;
 }
 
 .right-column {
     flex: 1;
-}
-
-.info-box {
     background-color: #f0f0f0;
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2rem;
 }
 
-/* Collapsible Styling */
-.collapsible {
-    background-color: #48533f;
-    color: white;
-    cursor: pointer;
+/* Info Strip Heading and Content */
+.info-strip-heading {
+    background-color: #f7f6f2;
     padding: 1rem;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.collapsible.active, .collapsible:hover {
-    background-color: #33402d;
+.info-strip-content {
+    background-color: #f7f6f2;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.content {
-    padding: 0 2rem;
+.expand-content {
     max-height: 0;
     overflow: hidden;
-    background-color: #f9f9f9;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.3s ease-out;
+}
+
+.expand-content.active {
+    max-height: 500px;
 }
 
 /* Schedule Table Styling */
 .schedule-table {
-    width: 90%;
+    width: 95%;
     border-collapse: separate;
     border-spacing: 4px;
-    margin-top: 1rem;
-    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
 .schedule-table th, .schedule-table td {
@@ -81,22 +69,13 @@ body {
 
 .schedule-table td.center-text {
     text-align: center;
-    vertical-align: middle;
 }
 
 .schedule-table th {
     background: #f0f0f0;
-    color: #333;
 }
 
-.schedule-table tbody tr:nth-child(even) {
-    background: #f9f9f9;
-}
-
-.custom-colored-row td:nth-child(n+2) {
-    background-color: #fcf0f3;
-}
-
+.custom-colored-row td:nth-child(n+2),
 .custom-colored-row .highlight-cell {
     background-color: #fcf0f3;
 }
@@ -105,7 +84,6 @@ body {
 a.pill {
     display: inline-block;
     padding: 3px 8px;
-    margin: 2px 2px 2px 0;
     background: #e6f0fa;
     color: #0066cc;
     border: 1px solid #cce;
@@ -128,26 +106,8 @@ a.pill:hover {
     font-size: 0.8rem;
 }
 
-/* Section strip styles */
-.strip {
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+.info-box {
+    background: white;
+    padding: 1rem;
     border-radius: 8px;
-    font-family: 'Forum', serif;
-}
-
-.light-bg {
-    background-color: #f5f4ee;
-}
-
-.alt-bg {
-    background-color: #f5f4ee;
-}
-
-.strip h2 {
-    margin-top: 0;
-}
-
-.text-red {
-    color: red;
 }
