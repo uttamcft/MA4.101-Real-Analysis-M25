@@ -95,5 +95,22 @@
     });
     </script>
 
+    <script>
+        document.querySelectorAll(".expand-button").forEach(button => {
+            button.addEventListener("click", () => {
+                const section = button.closest(".expandable-section");
+                const fullText = section.querySelector(".full-text");
+                
+                if (fullText.classList.contains("hidden")) {
+                    fullText.classList.remove("hidden");
+                    button.textContent = "Hide Details";
+                } else {
+                    fullText.classList.add("hidden");
+                    button.textContent = "More Details";
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
