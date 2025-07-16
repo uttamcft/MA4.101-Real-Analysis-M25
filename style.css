@@ -72,11 +72,11 @@ main {
 }
 
 .custom-colored-row td:nth-child(n+2) {
-    background-color: #e6f0fa; /* Example color */
+    background-color: #fcf0f3; /* Example color */
 }
 
 .custom-colored-row .highlight-cell {
-    background-color: #e6f0fa;
+    background-color: #fcf0f3;
 }
 
 /* Link Pill Styling */
