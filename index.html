@@ -8,109 +8,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="top-strip">
+
+    <!-- Top Banner -->
+    <header class="top-banner">
         <h1>Real Analysis M25</h1>
     </header>
 
-    <section class="main-layout">
+    <!-- Two Column Layout -->
+    <section class="two-column-layout">
+        <!-- Left Column: Collapsibles -->
         <div class="left-column">
-            <section class="info-strip-heading">
-                <h2>Prerequisite</h2>
-            </section>
-            <section class="info-strip-content">
-                <p>Elementary knowledge of Calculus is essential. Real Analysis provides the rigorous foundation...</p>
-                <button class="expand-btn">More Details</button>
-                <div class="expand-content">
-                    <p>Much of mathematics relies on solving equations, if not in explicit exact forms, then at least in establishing the existence of solutions. Real Analysis develops this material systematically in the context of real-valued functions of a real variable.</p>
+            <section class="collapsibles">
+                <button class="collapsible">1. Prerequisite</button>
+                <div class="content">
+                    <p>Elementary knowledge of Calculus... (rest as per your content)</p>
                 </div>
-            </section>
-            <section class="info-strip-heading">
-                <h2>Detailed Syllabus</h2>
-            </section>
-            <section class="info-strip-content">
-                <p>Units cover sequences, series, differential equations, and complex analysis basics.</p>
-                <button class="expand-btn">More Details</button>
-                <div class="expand-content">
-                    <p>[Full syllabus content goes here as per your original syllabus.]</p>
+
+                <button class="collapsible">2. Detailed Syllabus</button>
+                <div class="content">
+                    <p>Unit 1: ...</p>
+                    <p>Unit 2: ...</p>
+                    <p>Unit 3: ...</p>
+                    <p>Unit 4: ...</p>
+                    <p>Unit 5: ...</p>
+                    <p>A project related to the above syllabus will be done by students to be submitted by the end of the semester.</p>
                 </div>
-            </section>
-            <section class="info-strip-heading">
-                <h2>Grading</h2>
-            </section>
-            <section class="info-strip-content">
-                <p>Assignments: 10 marks, Quizzes: 10 marks...</p>
-                <button class="expand-btn">More Details</button>
-                <div class="expand-content">
-                    <p>[Full grading details.]</p>
-                </div>
-            </section>
-            <section class="info-strip-heading">
-                <h2>References</h2>
-            </section>
-            <section class="info-strip-content">
-                <p>Rudin, Walter, Principles of Mathematical Analysis, etc.</p>
-                <button class="expand-btn">More Details</button>
-                <div class="expand-content">
+
+                <button class="collapsible">3. Grading</button>
+                <div class="content">
                     <ul>
-                        <li>Rudin, Walter, Principles of Mathematical Analysis, third edition.</li>
-                        <li>Other references as per syllabus.</li>
+                        <li>Assignments in theory: 10 marks</li>
+                        <li>Quizzes in theory: 10 marks</li>
+                        <li>Mid Semester Examination in theory: 20 marks</li>
+                        <li>End Semester Examination in Theory: 30 marks</li>
+                        <li>Assessment project: 30 marks</li>
+                    </ul>
+                </div>
+
+                <button class="collapsible">4. References</button>
+                <div class="content">
+                    <ul>
+                        <li>Rudin, Walter, Principles of Mathematical Analysis...</li>
+                        <li>Bartle, Robert G., The Elements of Real Analysis...</li>
+                        <li>Ross, Kenneth A., Elementary Analysis...</li>
+                        <li>Kreyszig, Erwin. Advanced Engineering Mathematics...</li>
+                        <li>Goldberg, Richard R., Methods of Real Analysis...</li>
+                        <li>Churchill, Ruel V. and Brown, Complex Variables...</li>
+                        <li>Ahlfors, Lars V., Complex Analysis...</li>
                     </ul>
                 </div>
             </section>
-
-            <main>
-                <h2>Course Calendar</h2>
-                <table class="schedule-table">
-                    <colgroup>
-                        <col style="width: 10%;">
-                        <col style="width: 20%;">
-                        <col style="width: 40%;">
-                        <col style="width: 20%;">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Week</th>
-                            <th>Date</th>
-                            <th>Lecture</th>
-                            <th>Homework</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Example Row -->
-                        <tr>
-                            <td rowspan="2" class="center-text">1</td>
-                            <td class="center-text">29/7/25 [Tuesday]</td>
-                            <td>Introduction <a class="pill" href="#">Notes</a></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="center-text">1/8/25 [Friday]</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <!-- Repeat rows as needed -->
-                    </tbody>
-                </table>
-            </main>
         </div>
 
-        <aside class="right-column">
+        <!-- Right Column: Instructor Info -->
+        <div class="right-column">
             <div class="info-box">
-                <strong>Course Instructor:</strong> Dr. XYZ<br>
-                <strong>Tutors:</strong> A, B, C<br>
-                <strong>Office:</strong> Room 123, ABC Building
+                <p><strong>Instructor:</strong> Dr. XYZ</p>
+                <p><strong>Office:</strong> Room 123, ABC Building</p>
+                <p><strong>Tutors:</strong> A, B, C</p>
             </div>
-        </aside>
+        </div>
     </section>
 
+    <!-- Course Calendar Table -->
+    <main>
+        <h2>Course Calendar</h2>
+        <table class="schedule-table">
+            <colgroup>
+                <col style="width: 10%;">
+                <col style="width: 20%;">
+                <col style="width: 40%;">
+                <col style="width: 20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Date</th>
+                    <th>Lecture</th>
+                    <th>Homework</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Copy your complete table rows here -->
+            </tbody>
+        </table>
+    </main>
+
     <script>
-        document.querySelectorAll(".expand-btn").forEach(button => {
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(button => {
             button.addEventListener("click", () => {
+                button.classList.toggle("active");
                 const content = button.nextElementSibling;
-                content.classList.toggle("active");
-                button.textContent = content.classList.contains("active") ? "Less Details" : "More Details";
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
             });
         });
     </script>
+
 </body>
 </html>
