@@ -48,7 +48,7 @@ main {
 }
 
 /* Vertically center all table cells but keep text left-aligned */
-.schedule-table td {
+.schedule-table td, .schedule-table td {
     vertical-align: middle;
     text-align: left;
 }
