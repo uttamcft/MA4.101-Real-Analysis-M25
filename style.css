@@ -71,6 +71,10 @@ main {
     background: #f9f9f9;
 }
 
+.custom-colored-row td:nth-child(n+2) {
+    background-color: #e6f0fa; /* Example color */
+}
+
 /* Link Pill Styling */
 a.pill {
     display: inline-block;
