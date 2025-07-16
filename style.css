@@ -1,81 +1,71 @@
-/* Reset + Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Forum', sans-serif;
-    background: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Top Banner */
-.top-banner {
-    width: 100%;
-    background-color: #48533f;
-    color: white;
-    padding: 2rem;
-    text-align: center;
+.banner {
+  background-color: #004080;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
 }
 
-/* Two-Column Layout: Fixed Widths */
-.two-column-strip {
-    max-width: 1200px;
-    margin: 2rem auto;
-    display: flex;
-    gap: 2rem;
+.main {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Left column: 70% */
 .left-column {
-    width: 70%;
+  flex: 70%;
+  background-color: #f0f8ff;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Right column: 30% */
 .right-column {
-    width: 30%;
+  flex: 30%;
+  background-color: #e6f2ff;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Expandable Text Block */
-.expandable-text-block {
-    background: #f7f6f2;
-    padding: 1rem;
-    border-radius: 8px;
+.full-width {
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
-.text-container {
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    max-height: 3.2em; /* About 2 lines */
+.collapsible-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
-.text-container.expanded {
-    max-height: 500px;
+.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
 }
 
-.expand-toggle {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    background: white;
-    cursor: pointer;
+button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.expand-toggle:hover {
-    background: #eee;
+button:hover {
+  background-color: #0066cc;
 }
 
-/* Right Column Contact Box */
-.right-column {
-    background: #f0f0f0;
-    padding: 1rem;
-    border-radius: 8px;
-    line-height: 1.6;
+.info-entry {
+  margin-bottom: 15px;
 }
 
-/* Utility */
-p {
-    margin-bottom: 1rem;
+.label {
+  font-weight: bold;
 }
-
