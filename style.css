@@ -11,45 +11,74 @@ body {
     text-align: center;
 }
 
-/* Layout Wrapper: For consistent width control */
-.layout-wrapper {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
 /* Two-Column Layout */
 .two-column-layout {
     display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
     gap: 2rem;
 }
 
 .left-column {
     flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
 }
 
 .right-column {
     flex: 1;
 }
 
-/* Info Box Styling */
-.info-box {
-    background-color: #f0f0f0;
-    padding: 1.5rem;
-    border-radius: 8px;
+.full-width-strip {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0rem 1rem;
+    background-color: #f7f6f2;
+    border-radius: 0px;
 }
 
-/* Full Width Single Column Strip */
+
+
+.common-width {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Two-column layout */
+.two-column-layout {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Single-column full strip */
 .full-width-strip {
     background-color: #f7f6f2;
     border-radius: 8px;
-    padding: 1.5rem;
 }
 
-/* Expandable Text Block */
+
+.info-box {
+    background-color: #f0f0f0;
+    padding: 0 1rem;
+    border-radius: 8px;
+}
+
+
+/* Heading Strip */
+.info-strip-heading {
+    background-color: #f7f6f2;
+    padding: 1rem 2rem;
+    margin-bottom: 0;
+}
+
+/* Content Strip */
+.info-strip-content {
+    background-color: #f7f6f2;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+}
+
+
 .expandable-text-block {
     background: #f7f6f2;
     padding: 1.5rem;
@@ -60,13 +89,15 @@ body {
 .text-container {
     overflow: hidden;
     transition: max-height 0.4s ease;
-    max-height: 3.2em;
+    max-height: 3.2em; /* ~2 lines with your font */
 }
 
+/* Expanded class removes clamping */
 .text-container.expanded {
-    max-height: 500px;
+    max-height: 500px; /* Large enough for full paragraph */
 }
 
+/* Optional button styling */
 .expand-toggle {
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
@@ -81,14 +112,14 @@ body {
 
 /* Schedule Table Styling */
 .schedule-table {
-    width: 100%;
+    width: 90%;
     border-collapse: separate;
     border-spacing: 4px;
     margin-top: 1rem;
+    margin-left: 2rem;
 }
 
-.schedule-table th,
-.schedule-table td {
+.schedule-table th, .schedule-table td {
     padding: 0.6rem;
     border: 1px solid #ccc;
 }
@@ -112,7 +143,10 @@ body {
     background: #f9f9f9;
 }
 
-.custom-colored-row td:nth-child(n+2),
+.custom-colored-row td:nth-child(n+2) {
+    background-color: #fcf0f3;
+}
+
 .custom-colored-row .highlight-cell {
     background-color: #fcf0f3;
 }
@@ -144,7 +178,7 @@ a.pill:hover {
     font-size: 0.8rem;
 }
 
-/* Section Strip Styles */
+/* Section strip styles */
 .strip {
     padding: 1.5rem;
     margin-bottom: 1rem;
