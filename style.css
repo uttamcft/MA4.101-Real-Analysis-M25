@@ -31,9 +31,9 @@ body {
 .full-width-strip {
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 1rem 2rem;
+    padding: 0rem 1rem;
     background-color: #f7f6f2;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 
