@@ -48,7 +48,6 @@ body {
     transition: max-height 0.2s ease-out;
 }
 
-
 /* Navbar Styling */
 .navbar {
     display: flex;
@@ -81,7 +80,6 @@ main {
     padding: 0 1rem;
 }
 
-
 /* Schedule Table Styling */
 .schedule-table {
     width: 90%;
@@ -97,7 +95,7 @@ main {
 }
 
 /* Vertically center all table cells but keep text left-aligned */
-.schedule-table td, .schedule-table td {
+.schedule-table td {
     vertical-align: middle;
     text-align: left;
 }
@@ -106,7 +104,6 @@ main {
     text-align: center;
     vertical-align: middle;
 }
-
 
 .schedule-table th {
     background: #f0f0f0;
@@ -117,11 +114,13 @@ main {
     background: #f9f9f9;
 }
 
+/* Colored Rows: Light background from column 2 onwards */
 .custom-colored-row td:nth-child(n+2) {
-    background-color: #fcf0f3; /* Example color */
+    background-color: #fcf0f3;
 }
 
-.custom-colored-row .highlight-cell {
+/* Highlight Cell: For individual cells */
+.highlight-cell {
     background-color: #fcf0f3;
 }
 
