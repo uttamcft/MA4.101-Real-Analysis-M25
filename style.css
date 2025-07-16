@@ -47,13 +47,16 @@ main {
     border: 1px solid #ccc;
 }
 
-/* Center Week and Date Columns */
-.schedule-table td:first-child,
-.schedule-table td:nth-child(2),
-.schedule-table th:first-child,
-.schedule-table th:nth-child(2) {
-    text-align: center;
+/* Ensure vertical middle alignment */
+.schedule-table td:first-child {
     vertical-align: middle;
+    text-align: center;
+}
+
+/* Specifically target rowspan cells */
+.schedule-table td[rowspan] {
+    vertical-align: middle !important;
+    text-align: center;
 }
 
 .schedule-table th {
@@ -90,9 +93,4 @@ a.pill:hover {
     color: white;
     border-radius: 6px;
     font-size: 0.8rem;
-}
-
-/* Link Color Styling */
-a.link {
-    color: purple;
 }
