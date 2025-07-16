@@ -1,7 +1,7 @@
-/* Reset margin and set base font */
 body {
     margin: 0;
     font-family: 'Forum', sans-serif;
+    background: #ffffff;
 }
 
 /* Top Banner */
@@ -12,82 +12,69 @@ body {
     text-align: center;
 }
 
-/* Two-Column Layout */
+/* Two-Column Layout: 70-30 fixed proportions */
 .two-column-strip {
     display: flex;
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
     gap: 2rem;
+    box-sizing: border-box;
 }
 
-/* Fixed Width Columns */
 .left-column {
-    width: 70%;
+    flex: 0 0 70%;
+    box-sizing: border-box;
 }
 
 .right-column {
-    width: 30%;
+    flex: 0 0 30%;
+    box-sizing: border-box;
 }
 
-/* Expandable Paragraph Container */
-.expandable-text {
-    background: #f7f6f2;
-    padding: 1.5rem;
+/* Content box styles */
+.left-column p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.right-column {
+    background: #f0f0f0;
+    padding: 1rem;
     border-radius: 8px;
 }
 
-/* Text Clamping for Preview */
-.text-preview {
+/* Expandable text block */
+.expandable-text-block {
+    background: #f7f6f2;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.text-container {
     overflow: hidden;
-    max-height: 3.2em; /* Approx. 2 lines with Forum font */
     transition: max-height 0.4s ease;
+    max-height: 3.2em; /* Roughly 2 lines with your font */
 }
 
-/* Expanded Class Shows Full Text */
-.text-preview.expanded {
-    max-height: 500px; /* Enough to reveal full paragraph */
+.text-container.expanded {
+    max-height: 500px; /* Expandable height large enough for full paragraph */
 }
 
-/* Toggle Button */
 .expand-toggle {
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
-    font-family: 'Forum', sans-serif;
+    display: inline-block;
 }
 
 .expand-toggle:hover {
     background: #eee;
 }
 
-/* Right Column Info Styling */
-.right-column .info-box {
-    background: #f0f0f0;
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-/* Consistent Strip Width for Future Strips */
-.common-width {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-/* Example Strip Backgrounds */
-.strip {
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-.light-bg {
-    background-color: #f5f4ee;
-}
-
-.alt-bg {
-    background-color: #f7f6f2;
+/* General page spacing and reset */
+* {
+    box-sizing: border-box;
 }
