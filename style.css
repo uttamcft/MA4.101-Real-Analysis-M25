@@ -3,24 +3,35 @@ body {
     font-family: 'Forum', sans-serif;
 }
 
-/* Top Strip Styling */
-.top-strip {
+/* Top Banner */
+.top-banner {
     background-color: #48533f;
     color: white;
     padding: 2rem;
     text-align: center;
 }
 
-/* Two-Column Info Strip Styling */
-.info-strip {
+/* Two-Column Layout */
+.two-column-layout {
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #f0f0f0;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
 }
 
-.info-left, .info-right {
+.left-column {
+    flex: 3;
+}
+
+.right-column {
     flex: 1;
+}
+
+.info-box {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
 }
 
 /* Collapsible Styling */
@@ -34,6 +45,7 @@ body {
     text-align: left;
     outline: none;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .collapsible.active, .collapsible:hover {
@@ -48,43 +60,11 @@ body {
     transition: max-height 0.2s ease-out;
 }
 
-/* Navbar Styling */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background-color: #194363;
-    color: white;
-}
-
-.navbar-left {
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.navbar-right a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1rem;
-}
-
-.navbar-right a:hover {
-    text-decoration: underline;
-}
-
-/* Main content */
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
 /* Schedule Table Styling */
 .schedule-table {
     width: 90%;
-    border-collapse: separate; /* Important: must be 'separate' */
-    border-spacing: 4px;       /* Adjust this value as needed */
+    border-collapse: separate;
+    border-spacing: 4px;
     margin-top: 1rem;
     margin-left: 2rem;
 }
@@ -94,7 +74,6 @@ main {
     border: 1px solid #ccc;
 }
 
-/* Vertically center all table cells but keep text left-aligned */
 .schedule-table td {
     vertical-align: middle;
     text-align: left;
@@ -114,13 +93,11 @@ main {
     background: #f9f9f9;
 }
 
-/* Colored Rows: Light background from column 2 onwards */
 .custom-colored-row td:nth-child(n+2) {
     background-color: #fcf0f3;
 }
 
-/* Highlight Cell: For individual cells */
-.highlight-cell {
+.custom-colored-row .highlight-cell {
     background-color: #fcf0f3;
 }
 
