@@ -3,13 +3,6 @@ body {
     font-family: 'Forum', sans-serif;
 }
 
-/* Common Layout Wrapper */
-.layout-wrapper {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
 /* Top Banner */
 .top-banner {
     background-color: #48533f;
@@ -21,52 +14,79 @@ body {
 /* Two-Column Layout */
 .two-column-layout {
     display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
     gap: 2rem;
 }
 
 .left-column {
-    flex: 7;
+    flex: 3;
 }
 
 .right-column {
     flex: 3;
 }
 
-.left-column, .right-column {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Single Column Strip */
-.single-column-strip {
+.full-width-strip {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0rem 1rem;
     background-color: #f7f6f2;
-    padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
-/* Info Box */
+
+
+.common-width {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+
+
 .info-box {
     background-color: #f0f0f0;
-    padding: 1rem;
+    padding: 0 1rem;
     border-radius: 8px;
-    flex: 1;
 }
 
-/* Expandable Text */
+
+/* Heading Strip */
+.info-strip-heading {
+    background-color: #f7f6f2;
+    padding: 1rem 2rem;
+    margin-bottom: 0;
+}
+
+/* Content Strip */
+.info-strip-content {
+    background-color: #f7f6f2;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+}
+
+
 .expandable-text-block {
-    margin-top: 1rem;
+    background: #f7f6f2;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
 }
 
 .text-container {
     overflow: hidden;
     transition: max-height 0.4s ease;
-    max-height: 3.2em;
+    max-height: 3.2em; /* ~2 lines with your font */
 }
 
+/* Expanded class removes clamping */
 .text-container.expanded {
-    max-height: 500px;
+    max-height: 500px; /* Large enough for full paragraph */
 }
 
+/* Optional button styling */
 .expand-toggle {
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
@@ -79,12 +99,13 @@ body {
     background: #eee;
 }
 
-/* Schedule Table */
+/* Schedule Table Styling */
 .schedule-table {
-    width: 100%;
+    width: 90%;
     border-collapse: separate;
     border-spacing: 4px;
     margin-top: 1rem;
+    margin-left: 2rem;
 }
 
 .schedule-table th, .schedule-table td {
@@ -99,6 +120,7 @@ body {
 
 .schedule-table td.center-text {
     text-align: center;
+    vertical-align: middle;
 }
 
 .schedule-table th {
@@ -110,12 +132,15 @@ body {
     background: #f9f9f9;
 }
 
-.custom-colored-row td:nth-child(n+2),
+.custom-colored-row td:nth-child(n+2) {
+    background-color: #fcf0f3;
+}
+
 .custom-colored-row .highlight-cell {
     background-color: #fcf0f3;
 }
 
-/* Link Pill */
+/* Link Pill Styling */
 a.pill {
     display: inline-block;
     padding: 3px 8px;
@@ -132,7 +157,7 @@ a.pill:hover {
     background: #d0e6f7;
 }
 
-/* Badge */
+/* Badge Styling */
 .badge {
     display: inline-block;
     padding: 2px 6px;
@@ -142,7 +167,7 @@ a.pill:hover {
     font-size: 0.8rem;
 }
 
-/* Strip Styles */
+/* Section strip styles */
 .strip {
     padding: 1.5rem;
     margin-bottom: 1rem;
