@@ -47,16 +47,8 @@ main {
     border: 1px solid #ccc;
 }
 
-/* Ensure vertical middle alignment */
-.schedule-table td:first-child {
+.schedule-table td {
     vertical-align: middle;
-    text-align: center;
-}
-
-/* Specifically target rowspan cells */
-.schedule-table td[rowspan] {
-    vertical-align: middle !important;
-    text-align: center;
 }
 
 .schedule-table th {
