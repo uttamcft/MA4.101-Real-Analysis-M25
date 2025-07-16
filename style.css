@@ -7,7 +7,7 @@ body {
 .banner {
   background-color: #13364d;
   color: white;
-  padding: 40px 20px;
+  padding: 80px 20px;
   text-align: center;
   font-size: 1.5em;
 }
@@ -42,7 +42,7 @@ body {
 .collapsible-text {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 }
 
