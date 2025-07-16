@@ -72,6 +72,22 @@ body {
     max-height: 500px; /* Adjust as needed */
 }
 
+
+.expandable-section {
+    background-color: #f7f6f2;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.expandable-section .full-text {
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
 /* Schedule Table Left Margin */
 .schedule-table {
     margin-left: 2rem;
