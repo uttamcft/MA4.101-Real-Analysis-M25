@@ -44,17 +44,6 @@ body {
     padding: 0 1rem;
 }
 
-/* Two-column layout */
-.two-column-layout {
-    display: flex;
-    gap: 2rem;
-}
-
-/* Single-column full strip */
-.full-width-strip {
-    background-color: #f7f6f2;
-    border-radius: 8px;
-}
 
 
 .info-box {
