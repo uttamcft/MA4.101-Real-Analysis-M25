@@ -10,69 +10,73 @@ body {
     text-align: center;
 }
 
-/* Layout */
 .main-layout {
     display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 .left-column {
     flex: 3;
-    padding: 2rem;
+    margin-right: 1rem;
 }
 
 .right-column {
     flex: 1;
-    background-color: #f0f0f0;
-    padding: 2rem;
 }
 
-/* Info Strip Heading and Content */
-.info-strip-heading {
+.info-strip {
     background-color: #f7f6f2;
-    padding: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.info-strip-heading {
+    font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
-.info-strip-content {
-    background-color: #f7f6f2;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+.expand-button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #48533f;
+    color: white;
+    cursor: pointer;
 }
 
 .expand-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease;
 }
 
-.expand-content.active {
+.expand-button.active + .expand-content {
     max-height: 500px;
 }
 
-/* Schedule Table Styling */
 .schedule-table {
-    width: 95%;
+    width: 90%;
+    margin-left: 2rem;
     border-collapse: separate;
     border-spacing: 4px;
-    margin-top: 2rem;
 }
 
-.schedule-table th, .schedule-table td {
+.schedule-table th,
+.schedule-table td {
     padding: 0.6rem;
     border: 1px solid #ccc;
 }
 
-.schedule-table td {
-    vertical-align: middle;
-    text-align: left;
-}
-
 .schedule-table td.center-text {
     text-align: center;
+    vertical-align: middle;
 }
 
-.schedule-table th {
-    background: #f0f0f0;
+.schedule-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
 }
 
 .custom-colored-row td:nth-child(n+2),
@@ -80,10 +84,10 @@ body {
     background-color: #fcf0f3;
 }
 
-/* Link Pill Styling */
 a.pill {
     display: inline-block;
     padding: 3px 8px;
+    margin: 2px 2px 2px 0;
     background: #e6f0fa;
     color: #0066cc;
     border: 1px solid #cce;
@@ -96,7 +100,6 @@ a.pill:hover {
     background: #d0e6f7;
 }
 
-/* Badge Styling */
 .badge {
     display: inline-block;
     padding: 2px 6px;
@@ -104,10 +107,4 @@ a.pill:hover {
     color: white;
     border-radius: 6px;
     font-size: 0.8rem;
-}
-
-.info-box {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
 }
