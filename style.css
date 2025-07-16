@@ -53,6 +53,12 @@ main {
     text-align: left;
 }
 
+/* Center-align only first two columns */
+.schedule-table td:nth-child(1),
+.schedule-table td:nth-child(2) {
+    text-align: center;
+}
+
 
 .schedule-table th {
     background: #f0f0f0;
