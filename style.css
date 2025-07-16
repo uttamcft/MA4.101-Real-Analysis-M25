@@ -47,17 +47,23 @@ main {
     border: 1px solid #ccc;
 }
 
-/* Center-align first two columns */
-.schedule-table td:nth-child(1),
-.schedule-table td:nth-child(2) {
-    text-align: center;
+/* Vertically center all table cells but keep text left-aligned */
+.schedule-table td {
     vertical-align: middle;
+    text-align: left;
 }
 
-/* Ensure rowspan cells are also centered */
+/* Specifically for first two columns: left-align, but still vertical middle */
+.schedule-table td:nth-child(1),
+.schedule-table td:nth-child(2) {
+    vertical-align: middle;
+    text-align: left;
+}
+
+/* Rowspan cells: same rule to keep consistency */
 .schedule-table td[rowspan] {
     vertical-align: middle !important;
-    text-align: center !important;
+    text-align: left !important;
 }
 
 .schedule-table th {
