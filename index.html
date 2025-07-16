@@ -84,5 +84,15 @@
         });
     </script>
 
+    <script>
+    document.querySelectorAll(".expand-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            const content = button.nextElementSibling;
+            content.classList.toggle("active");
+            button.textContent = content.classList.contains("active") ? "Less Details" : "More Details";
+        });
+    });
+    </script>
+
 </body>
 </html>
