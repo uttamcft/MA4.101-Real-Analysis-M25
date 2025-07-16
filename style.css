@@ -47,13 +47,14 @@ main {
     border: 1px solid #ccc;
 }
 
-/* Add these centering rules */
-.schedule-table td:first-child,
- {
+/* Center-align first two columns */
+.schedule-table td:nth-child(1),
+.schedule-table td:nth-child(2) {
     text-align: center;
     vertical-align: middle;
 }
 
+/* Ensure rowspan cells are also centered */
 .schedule-table td[rowspan] {
     vertical-align: middle !important;
     text-align: center !important;
@@ -94,5 +95,3 @@ a.pill:hover {
     border-radius: 6px;
     font-size: 0.8rem;
 }
-
-
