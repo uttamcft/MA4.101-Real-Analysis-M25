@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Analysis M25</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,92 +13,83 @@
         <h1>Real Analysis M25</h1>
     </header>
 
-    <!-- Two Column Layout -->
-    <div class="common-width two-column-layout">
-        <!-- Left Column: Collapsibles -->
+    <!-- Two-Column Layout -->
+    <div class="layout-wrapper two-column-layout">
         <div class="left-column">
-            
-
-            <div class="expandable-text-block">
-                <h2>Prerequisite</h2>
-                <div class="text-container">
-                    <p class="expandable-text">
-                        Elementary knowledge of Calculus. Much of mathematics relies on our ability to
-                        be able to solve equations, if not in explicit exact forms, then at least in being 
-                        able to establish the existence of solutions. To do this requires a knowledge of so-called
-                        "analysis", which in many respects is just Calculus in very general settings. The foundations
-                        for this work are commenced in Real Analysis, a course that develops this basic material in a
-                        systematic and rigorous manner in the context of real-valued functions of a real variable.
-                    </p>
-                </div>
-                <button class="expand-toggle">More Details</button>
+            <div class="info-box">
+                <strong>Course Instructor:</strong> Dr. XYZ<br>
+                <strong>Tutors:</strong> A, B, C
             </div>
-
-
         </div>
 
-        <!-- Right Column: Instructor Info -->
         <div class="right-column">
             <div class="info-box">
-                <p><strong>Instructor:</strong> Uttam Singh</p>
-                <p><strong>Office:</strong> Vindhya B5, 205B</p>
-                <p><strong>Tutors:</strong> A, B, C</p>
+                <strong>Office:</strong> Room 123, ABC Building
             </div>
         </div>
-
-        
     </div>
 
-
-    <div class="common-width full-width-strip">
-            <p>Cant Now lost gif will it believe announcement spanning both columns' width.</p>
+    <!-- Full Width Single Column Strip -->
+    <div class="layout-wrapper">
+        <div class="full-width-strip">
+            <h2>Course Notice</h2>
+            <p>This is a full-width notice area. Adjust the content as needed.</p>
+        </div>
     </div>
 
+    <!-- Expandable Text Block -->
+    <div class="layout-wrapper">
+        <div class="expandable-text-block">
+            <h2>Prerequisite</h2>
+            <div class="text-container">
+                Elementary knowledge of Calculus. Much of mathematics relies on solving equations.
+                If not in explicit exact forms, then at least in establishing the existence of solutions. 
+                To do this requires a knowledge of so-called "analysis," which in many respects is 
+                just Calculus in very general settings. The foundations for this work are commenced 
+                in Real Analysis.
+            </div>
+            <button class="expand-toggle">More Details</button>
+        </div>
+    </div>
 
-
-    
-    <!-- Course Calendar Table -->
-    <main>
+    <!-- Schedule Table -->
+    <div class="layout-wrapper">
         <h2>Course Calendar</h2>
         <table class="schedule-table">
-            <colgroup>
-                <col style="width: 10%;">
-                <col style="width: 20%;">
-                <col style="width: 40%;">
-                <col style="width: 20%;">
-            </colgroup>
             <thead>
                 <tr>
                     <th>Week</th>
                     <th>Date</th>
-                    <th>Lectures</th>
-                    <th>Assignments</th>
+                    <th>Lecture</th>
+                    <th>Homework</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Copy your complete table rows here -->
+                <tr>
+                    <td class="center-text">1</td>
+                    <td class="center-text">29/7/25 [Tuesday]</td>
+                    <td>Introduction <a class="pill" href="#">Notes</a></td>
+                    <td></td>
+                </tr>
+                <tr class="custom-colored-row">
+                    <td class="center-text">1</td>
+                    <td class="highlight-cell center-text">1/8/25 [Friday]</td>
+                    <td>Holiday</td>
+                    <td></td>
+                </tr>
             </tbody>
         </table>
-    </main>
-
-
-
-
+    </div>
 
     <script>
-        document.querySelectorAll(".expand-toggle").forEach(button => {
-            button.addEventListener("click", () => {
-                const container = button.previousElementSibling;
-                container.classList.toggle("expanded");
-                if (container.classList.contains("expanded")) {
-                    button.textContent = "Hide Details";
-                } else {
-                    button.textContent = "More Details";
-                }
-            });
+        const toggleButton = document.querySelector('.expand-toggle');
+        const textContainer = document.querySelector('.text-container');
+
+        toggleButton.addEventListener('click', () => {
+            textContainer.classList.toggle('expanded');
+            toggleButton.textContent = textContainer.classList.contains('expanded') ? 'Less Details' : 'More Details';
         });
     </script>
-
 
 </body>
 </html>
