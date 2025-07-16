@@ -53,6 +53,10 @@ main {
     text-align: center;
 }
 
+.schedule-table td[rowspan] {
+    vertical-align: middle;
+}
+
 .schedule-table th {
     background: #f0f0f0;
     color: #333;
