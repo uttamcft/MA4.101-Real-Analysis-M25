@@ -1,50 +1,43 @@
-body {
+/* Reset + Base Styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Forum', sans-serif;
-    background: #ffffff;
+    background: white;
 }
 
 /* Top Banner */
 .top-banner {
+    width: 100%;
     background-color: #48533f;
     color: white;
     padding: 2rem;
     text-align: center;
 }
 
-/* Two-Column Layout: 70-30 fixed proportions */
+/* Two-Column Layout: Fixed Widths */
 .two-column-strip {
-    display: flex;
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 0 1rem;
+    display: flex;
     gap: 2rem;
-    box-sizing: border-box;
 }
 
+/* Left column: 70% */
 .left-column {
-    flex: 0 0 70%;
-    box-sizing: border-box;
+    width: 70%;
 }
 
+/* Right column: 30% */
 .right-column {
-    flex: 0 0 30%;
-    box-sizing: border-box;
+    width: 30%;
 }
 
-/* Content box styles */
-.left-column p {
-    margin: 0;
-    line-height: 1.5;
-}
-
-.right-column {
-    background: #f0f0f0;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-/* Expandable text block */
+/* Expandable Text Block */
 .expandable-text-block {
     background: #f7f6f2;
     padding: 1rem;
@@ -54,11 +47,11 @@ body {
 .text-container {
     overflow: hidden;
     transition: max-height 0.4s ease;
-    max-height: 3.2em; /* Roughly 2 lines with your font */
+    max-height: 3.2em; /* About 2 lines */
 }
 
 .text-container.expanded {
-    max-height: 500px; /* Expandable height large enough for full paragraph */
+    max-height: 500px;
 }
 
 .expand-toggle {
@@ -67,14 +60,22 @@ body {
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
-    display: inline-block;
 }
 
 .expand-toggle:hover {
     background: #eee;
 }
 
-/* General page spacing and reset */
-* {
-    box-sizing: border-box;
+/* Right Column Contact Box */
+.right-column {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    line-height: 1.6;
 }
+
+/* Utility */
+p {
+    margin-bottom: 1rem;
+}
+
