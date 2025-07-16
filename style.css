@@ -38,3 +38,35 @@ main {
     margin: 2rem auto;
     padding: 0 1rem;
 }
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+/* Control header styling */
+.schedule-table th {
+    background-color: #1abc9c;  /* Header background color */
+    color: white;               /* Header text color */
+    padding: 0.75rem;
+    text-align: left;           /* Align text left */
+    font-size: 1rem;            /* Header font size */
+}
+
+/* Row styling */
+.schedule-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.95rem;         /* Row font size */
+}
+
+/* Alternate row colors for readability */
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect (optional) */
+.schedule-table tbody tr:hover {
+    background-color: #eef;
+}
