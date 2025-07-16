@@ -1,74 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Analysis M25</title>
-    <link rel="stylesheet" href="style.css">
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-    <!-- MathJax -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body>
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #48533f;
+    color: white;
+}
 
-    <nav class="navbar">
-        <div class="navbar-left">Real Analysis M25</div>
-        <div class="navbar-right">
-            <a href="#">Syllabus</a>
-            <a href="#">Lectures</a>
-            <a href="#">Assignments</a>
-        </div>
-    </nav>
+.navbar-left {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
 
-    <main>
-        <h1>Course Calendar</h1>
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
 
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Week</th>
-                    <th>Date</th>
-                    <th>Lecture</th>
-                    <th>Textbook</th>
-                    <th>Lab & Discussion</th>
-                    <th>Homework & Project</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="2">1</td>
-                    <td>Mon 6/23</td>
-                    <td>
-                        Welcome<br>
-                        <a class="pill" href="#">Recording</a>
-                        <a class="pill" href="#">Slides</a>
-                    </td>
-                    <td><a class="pill" href="#">Ch. 1.1</a></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+.navbar-right a:hover {
+    text-decoration: underline;
+}
 
-                <tr>
-                    <td>Tue 6/24</td>
-                    <td>
-                        Functions<br>
-                        <a class="pill" href="#">Recording</a>
-                    </td>
-                    <td><a class="pill" href="#">Ch. 1.2</a></td>
-                    <td>
-                        <a href="#">Disc 00</a><br>
-                        <a class="pill" href="#">Solutions</a>
-                    </td>
-                    <td>
-                        <a href="#">HW 01</a><br>
-                        <span class="badge">Due Tue 7/1</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
 
-</body>
-</html>
+/* Schedule Table Styling */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+}
+
+/* Center Week and Date Columns */
+.schedule-table td:first-child,
+.schedule-table td:nth-child(2),
+.schedule-table th:first-child,
+.schedule-table th:nth-child(2) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.schedule-table th {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Link Pill Styling */
+a.pill {
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 2px 2px 2px 0;
+    background: #e6f0fa;
+    color: #0066cc;
+    border: 1px solid #cce;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+a.pill:hover {
+    background: #d0e6f7;
+}
+
+/* Badge Styling */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    background: #666;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+/* Link Color Styling */
+a.link {
+    color: purple;
+}
