@@ -1,3 +1,4 @@
+/* Reset margin and set base font */
 body {
     margin: 0;
     font-family: 'Forum', sans-serif;
@@ -12,7 +13,7 @@ body {
 }
 
 /* Two-Column Layout */
-.two-column-layout {
+.two-column-strip {
     display: flex;
     max-width: 1200px;
     margin: 2rem auto;
@@ -20,159 +21,67 @@ body {
     gap: 2rem;
 }
 
+/* Fixed Width Columns */
 .left-column {
-    flex: 3;
+    width: 70%;
 }
 
 .right-column {
-    flex: 3;
+    width: 30%;
 }
 
-.full-width-strip {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0rem 1rem;
-    background-color: #f7f6f2;
-    border-radius: 0px;
-}
-
-
-
-.common-width {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-
-
-.info-box {
-    background-color: #f0f0f0;
-    padding: 0 1rem;
-    border-radius: 8px;
-}
-
-
-/* Heading Strip */
-.info-strip-heading {
-    background-color: #f7f6f2;
-    padding: 1rem 2rem;
-    margin-bottom: 0;
-}
-
-/* Content Strip */
-.info-strip-content {
-    background-color: #f7f6f2;
-    padding: 1rem 2rem;
-    margin-bottom: 1rem;
-}
-
-
-.expandable-text-block {
+/* Expandable Paragraph Container */
+.expandable-text {
     background: #f7f6f2;
     padding: 1.5rem;
-    margin: 1rem 0;
     border-radius: 8px;
 }
 
-.text-container {
+/* Text Clamping for Preview */
+.text-preview {
     overflow: hidden;
+    max-height: 3.2em; /* Approx. 2 lines with Forum font */
     transition: max-height 0.4s ease;
-    max-height: 3.2em; /* ~2 lines with your font */
 }
 
-/* Expanded class removes clamping */
-.text-container.expanded {
-    max-height: 500px; /* Large enough for full paragraph */
+/* Expanded Class Shows Full Text */
+.text-preview.expanded {
+    max-height: 500px; /* Enough to reveal full paragraph */
 }
 
-/* Optional button styling */
+/* Toggle Button */
 .expand-toggle {
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
+    font-family: 'Forum', sans-serif;
 }
 
 .expand-toggle:hover {
     background: #eee;
 }
 
-/* Schedule Table Styling */
-.schedule-table {
-    width: 90%;
-    border-collapse: separate;
-    border-spacing: 4px;
-    margin-top: 1rem;
-    margin-left: 2rem;
-}
-
-.schedule-table th, .schedule-table td {
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-}
-
-.schedule-table td {
-    vertical-align: middle;
-    text-align: left;
-}
-
-.schedule-table td.center-text {
-    text-align: center;
-    vertical-align: middle;
-}
-
-.schedule-table th {
+/* Right Column Info Styling */
+.right-column .info-box {
     background: #f0f0f0;
-    color: #333;
-}
-
-.schedule-table tbody tr:nth-child(even) {
-    background: #f9f9f9;
-}
-
-.custom-colored-row td:nth-child(n+2) {
-    background-color: #fcf0f3;
-}
-
-.custom-colored-row .highlight-cell {
-    background-color: #fcf0f3;
-}
-
-/* Link Pill Styling */
-a.pill {
-    display: inline-block;
-    padding: 3px 8px;
-    margin: 2px 2px 2px 0;
-    background: #e6f0fa;
-    color: #0066cc;
-    border: 1px solid #cce;
+    padding: 1rem;
     border-radius: 8px;
-    font-size: 0.9rem;
-    text-decoration: none;
+    font-size: 1rem;
 }
 
-a.pill:hover {
-    background: #d0e6f7;
+/* Consistent Strip Width for Future Strips */
+.common-width {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* Badge Styling */
-.badge {
-    display: inline-block;
-    padding: 2px 6px;
-    background: #666;
-    color: white;
-    border-radius: 6px;
-    font-size: 0.8rem;
-}
-
-/* Section strip styles */
+/* Example Strip Backgrounds */
 .strip {
     padding: 1.5rem;
-    margin-bottom: 1rem;
     border-radius: 8px;
-    font-family: 'Forum', serif;
 }
 
 .light-bg {
@@ -180,13 +89,5 @@ a.pill:hover {
 }
 
 .alt-bg {
-    background-color: #f5f4ee;
-}
-
-.strip h2 {
-    margin-top: 0;
-}
-
-.text-red {
-    color: red;
+    background-color: #f7f6f2;
 }
