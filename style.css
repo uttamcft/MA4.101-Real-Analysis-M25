@@ -35,10 +35,12 @@ main {
     padding: 0 1rem;
 }
 
+
 /* Schedule Table Styling */
 .schedule-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate; /* Important: must be 'separate' */
+    border-spacing: 8px;       /* Adjust this value as needed */
     margin-top: 1rem;
 }
 
