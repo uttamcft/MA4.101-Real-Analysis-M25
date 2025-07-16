@@ -1,28 +1,44 @@
+/* Base body styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: white;
-    color: #333;
 }
 
-header {
-    background: #1abc9c;
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    /* Background color (adjust here) */
+    background-color: #1abc9c; /* Teal Cayman-style color */
+
+    /* Text color (adjust here) */
     color: white;
-    padding: 1rem;
-    text-align: center;
 }
 
+/* Navbar left (Course Name) */
+.navbar-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar right (Links) */
+.navbar-right a {
+    color: white;               /* Link color (adjust here) */
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+/* Hover effect for links */
+.navbar-right a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
 main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
-}
-
-a {
-    color: #1abc9c;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
