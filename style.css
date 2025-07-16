@@ -42,20 +42,26 @@ main {
     margin-top: 1rem;
 }
 
-.schedule-table th, .schedule-table td {
+.schedule-table th,
+.schedule-table td {
     padding: 0.6rem;
     border: 1px solid #ccc;
 }
 
-.schedule-table td {
+/* Center only first two columns */
+.schedule-table td:first-child,
+.schedule-table td:nth-child(2) {
     vertical-align: middle;
+    text-align: center;
 }
 
+/* Table header styling */
 .schedule-table th {
     background: #f0f0f0;
     color: #333;
 }
 
+/* Zebra stripes */
 .schedule-table tbody tr:nth-child(even) {
     background: #f9f9f9;
 }
