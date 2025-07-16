@@ -77,9 +77,13 @@
     <script>
         document.querySelectorAll(".expand-toggle").forEach(button => {
             button.addEventListener("click", () => {
-                const text = button.previousElementSibling;
-                text.classList.toggle("expanded");
-                button.textContent = text.classList.contains("expanded") ? "Hide Details" : "More Details";
+                const container = button.previousElementSibling;
+                container.classList.toggle("expanded");
+                if (container.classList.contains("expanded")) {
+                    button.textContent = "Hide Details";
+                } else {
+                    button.textContent = "More Details";
+                }
             });
         });
     </script>
