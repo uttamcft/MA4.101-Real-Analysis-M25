@@ -75,6 +75,10 @@ main {
     background-color: #e6f0fa; /* Example color */
 }
 
+.custom-colored-row .highlight-cell {
+    background-color: #e6f0fa;
+}
+
 /* Link Pill Styling */
 a.pill {
     display: inline-block;
