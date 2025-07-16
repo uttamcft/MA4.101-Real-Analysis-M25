@@ -3,93 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Analysis M25</title>
+    <title>Clean Slate Layout</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Top Banner -->
     <header class="top-banner">
-        <h1>Real Analysis M25</h1>
+        <h1>Welcome to Real Analysis M25</h1>
     </header>
 
-    <!-- Two-Column Layout -->
-    <div class="layout-wrapper two-column-layout">
+    <div class="two-column-layout">
         <div class="left-column">
-            <div class="info-box">
-                <strong>Course Instructor:</strong> Dr. XYZ<br>
-                <strong>Tutors:</strong> A, B, C
+            <div class="expandable-text-block">
+                <div class="text-container">
+                    Real Analysis focuses on the rigorous foundation of calculus and its applications in mathematics.
+                    This course will cover sequences, series, limits, continuity, differentiability, and integrability.
+                    The aim is to develop a deeper understanding of mathematical analysis and prepare students for advanced courses.
+                    Detailed examples and exercises will be provided to build strong problem-solving skills.
+                    We also include topics like metric spaces and functional analysis basics.
+                    Each concept will be explained with proofs and applications.
+                    
+                    Students are expected to participate actively in class discussions.
+                    Office hours and extra help sessions will be arranged as needed.
+                </div>
+                <button class="expand-toggle">More Details</button>
             </div>
         </div>
 
         <div class="right-column">
             <div class="info-box">
-                <strong>Office:</strong> Room 123, ABC Building
+                <p><strong>Instructor:</strong> Dr. XYZ</p>
+                <p><strong>Office:</strong> Room 123, ABC Building</p>
+                <p><strong>Email:</strong> xyz@example.com</p>
             </div>
         </div>
-    </div>
-
-    <!-- Full Width Single Column Strip -->
-    <div class="layout-wrapper">
-        <div class="full-width-strip">
-            <h2>Course Notice</h2>
-            <p>This is a full-width notice area. Adjust the content as needed.</p>
-        </div>
-    </div>
-
-    <!-- Expandable Text Block -->
-    <div class="layout-wrapper">
-        <div class="expandable-text-block">
-            <h2>Prerequisite</h2>
-            <div class="text-container">
-                Elementarya knowledge of Calculus. Much of mathematics relies on solving equations.
-                If not in explicit exact forms, then at least in establishing the existence of solutions. 
-                To do this requires a knowledge of so-called "analysis," which in many respects is 
-                just Calculus in very general settings. The foundations for this work are commenced 
-                in Real Analysis.
-            </div>
-            <button class="expand-toggle">More Details</button>
-        </div>
-    </div>
-
-    <!-- Schedule Table -->
-    <div class="layout-wrapper">
-        <h2>Course Calendar</h2>
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Week</th>
-                    <th>Date</th>
-                    <th>Lecture</th>
-                    <th>Homework</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="center-text">1</td>
-                    <td class="center-text">29/7/25 [Tuesday]</td>
-                    <td>Introduction <a class="pill" href="#">Notes</a></td>
-                    <td></td>
-                </tr>
-                <tr class="custom-colored-row">
-                    <td class="center-text">1</td>
-                    <td class="highlight-cell center-text">1/8/25 [Friday]</td>
-                    <td>Holiday</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
     <script>
-        const toggleButton = document.querySelector('.expand-toggle');
+        const toggleBtn = document.querySelector('.expand-toggle');
         const textContainer = document.querySelector('.text-container');
-
-        toggleButton.addEventListener('click', () => {
+        toggleBtn.addEventListener('click', () => {
             textContainer.classList.toggle('expanded');
-            toggleButton.textContent = textContainer.classList.contains('expanded') ? 'Less Details' : 'More Details';
+            toggleBtn.textContent = textContainer.classList.contains('expanded') ? 'Less Details' : 'More Details';
         });
     </script>
-
 </body>
 </html>
