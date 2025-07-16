@@ -135,5 +135,20 @@
         });
     </script>
 
+    <script>
+document.querySelectorAll(".expand-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+        const container = button.previousElementSibling;
+        container.classList.toggle("expanded");
+
+        if (container.classList.contains("expanded")) {
+            button.textContent = "Hide Details";
+        } else {
+            button.textContent = "More Details";
+        }
+    });
+});
+</script>
+
 </body>
 </html>
