@@ -114,3 +114,7 @@ a.pill:hover {
 .strip h2 {
     margin-top: 0;
 }
+
+.text-red {
+    color: red;
+}
