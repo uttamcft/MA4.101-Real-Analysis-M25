@@ -45,16 +45,18 @@ main {
 .schedule-table th, .schedule-table td {
     padding: 0.6rem;
     border: 1px solid #ccc;
-    vertical-align: top;
 }
 
+/* Ensure vertical middle alignment */
 .schedule-table td:first-child {
     vertical-align: middle;
     text-align: center;
 }
 
+/* Specifically target rowspan cells */
 .schedule-table td[rowspan] {
-    vertical-align: middle;
+    vertical-align: middle !important;
+    text-align: center;
 }
 
 .schedule-table th {
