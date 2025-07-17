@@ -21,14 +21,14 @@ body {
 
 .left-column {
   flex: 0 0 68%;
-  background-color: #f4f7fa;
+  background-color: #fef9fc;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .right-column {
   flex: 0 0 30%;
-  background-color: #f4f7fa;
+  background-color: #fef9fc;
   padding: 20px;
   box-sizing: border-box;
 }
