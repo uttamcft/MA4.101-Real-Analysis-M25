@@ -39,11 +39,22 @@ body {
   margin: 0 20px 20px 20px; /* match spacing from sides and below */
 }
 
+
 .collapsible-text {
+  font-family: 'Forum', serif;
+  font-size: 18px;
+  line-height: 1.6;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* or however many lines you want */
+}
+
+.non-collapsible-text {
+  font-family: 'Forum', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .expanded {
