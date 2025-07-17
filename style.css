@@ -21,20 +21,20 @@ body {
 
 .left-column {
   flex: 0 0 68%;
-  background-color: #fafafa;
+  background-color: #f4f7fa;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .right-column {
   flex: 0 0 30%;
-  background-color: #fafafa;
+  background-color: #f4f7fa;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .full-width {
-  background-color: #f4f7fa;
+  background-color: #fafafa;
   padding: 20px;
   margin: 0 20px 20px 20px; /* match spacing from sides and below */
 }
