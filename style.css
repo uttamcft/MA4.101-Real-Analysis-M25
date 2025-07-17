@@ -5,7 +5,7 @@ body {
 }
 
 .banner {
-  background-color: #13364d;
+  background-color: #136782;
   color: white;
   padding: 80px 20px;
   text-align: center;
@@ -21,20 +21,20 @@ body {
 
 .left-column {
   flex: 0 0 68%;
-  background-color: #f0f8ff;
+  background-color: #f7f4ee;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .right-column {
   flex: 0 0 30%;
-  background-color: #e6f2ff;
+  background-color: #f7f4ee;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .full-width {
-  background-color: #f9f9f9;
+  background-color: #eef5f7;
   padding: 20px;
   margin: 0 20px 20px 20px; /* match spacing from sides and below */
 }
